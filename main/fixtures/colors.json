@@ -1,0 +1,9 @@
+[
+  {
+    "model": "main.color",
+    "pk": 1,
+    "fields": {
+      "color": "Blue"
+    }
+  }
+]

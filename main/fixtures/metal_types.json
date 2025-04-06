@@ -1,0 +1,20 @@
+[
+  {
+    "model": "main.metaltype",
+    "pk": 1,
+    "fields": {
+      "name": "Gold",
+      "color": "Yellow",
+      "carat": 9
+    }
+  },
+  {
+    "model": "main.metaltype",
+    "pk": 2,
+    "fields": {
+      "name": "Gold",
+      "color": "White",
+      "carat": 9
+    }
+  }
+]

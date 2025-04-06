@@ -1,0 +1,13 @@
+[
+  {
+    "model": "main.product",
+    "pk": 1,
+    "fields": {
+      "name": "Heart Signet (Heavyweight)",
+      "description": "\"Symbols manifest thought, a thought to heal your organs\"",
+      "available": true,
+      "product_type": 1,
+      "price": "3400.00"
+    }
+  }
+]

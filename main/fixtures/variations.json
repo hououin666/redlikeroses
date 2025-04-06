@@ -1,0 +1,38 @@
+[
+  {
+    "model": "main.productvariation",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "color": 1,
+      "size": 1,
+      "metal_type": 1,
+      "quantity": 10,
+      "available": true
+    }
+  },
+  {
+    "model": "main.productvariation",
+    "pk": 2,
+    "fields": {
+      "product": 1,
+      "color": 1,
+      "size": 2,
+      "metal_type": 2,
+      "quantity": 10,
+      "available": true
+    }
+  },
+  {
+    "model": "main.productvariation",
+    "pk": 3,
+    "fields": {
+      "product": 1,
+      "color": 1,
+      "size": 1,
+      "metal_type": 2,
+      "quantity": 10,
+      "available": true
+    }
+  }
+]
