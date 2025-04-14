@@ -31,6 +31,11 @@ admin.site.site_header = "Rings administration"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls'), name='products'),
+    path('users/', include('users.urls'), name='users'),
+    path('cart/', include('cart.urls'), name ='cart'),
+    path('orders/', include('orders.urls'), name='orders'),
+
+
 
 ]
 

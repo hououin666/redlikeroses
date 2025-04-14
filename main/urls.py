@@ -12,7 +12,6 @@ urlpatterns = [
     path('products/catalog/<int:product_type_id>', products_list, name='category_list'),
     path('products/<int:product_id>', product_detail, name='product_detail'),
 
-
 ]
 
 

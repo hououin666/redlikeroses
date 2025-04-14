@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'users',
+    'cart',
+    'orders',
+
+
 
 
 ]
@@ -66,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart',
             ],
         },
     },
@@ -135,3 +140,5 @@ MEDIA_URL='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR/ 'media')
 
 AUTH_USER_MODEL = "users.User"
+
+CART_SESSION_ID = 'cart'

@@ -338,9 +338,10 @@ input:focus {
 
 
 .grob {
-    width: 35px;
-    height: 35px;
+    width: 24px;
+    height: 24px;
     margin-right: 10px;
+    margin-top: -9px;
 }
 
 .cart-quantity {
@@ -416,7 +417,7 @@ input:focus {
 
 .cart-card-img img {
     width: 125px;
-    height: 125px;
+    height: 135px;
     border: 1px solid #00000086;
 }
 

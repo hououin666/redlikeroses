@@ -1,6 +1,9 @@
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
+from django.urls import reverse
 
+from cart.forms import CartAddProductForm
 from main.models import ProductVariation, Color, MetalType, Size, Product, ProductType
 
 
@@ -44,10 +47,13 @@ def products_list(request,product_type_id=None):
 
 def product_detail(request, product_id):
     product = Product.objects.filter(id=product_id).last()
-
+    cart_product_form = CartAddProductForm()
     context = {
         'product': product,
+        'cart_product_form': cart_product_form
 
     }
     return render(request, 'products/product_detail.html', context)
+
+
 

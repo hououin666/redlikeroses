@@ -6,25 +6,10 @@ from main.models import Product, MetalType, ProductType, Size, ProductVariation,
 
 
 
-# admin.site.register(Product)
-# admin.site.register(ProductVariation)
 admin.site.register(MetalType)
 admin.site.register(ProductType)
 admin.site.register(Size)
 admin.site.register(Color)
-
-
-
-# class ProductInLine(admin.TabularInline):
-#     model = Product
-#     fields = ['name','price']
-
-#
-
-
-
-
-
 
 
 class ProductVariationInLine(admin.TabularInline):
