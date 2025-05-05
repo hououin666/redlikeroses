@@ -68,12 +68,17 @@
                                         <div class="orders-carts">
                                             <span class="dadad">Name: </span><a class="" href="{% url 'main:product_detail' item.product.id %}">{{ item.product.name }}</a>
                                             <br>
-                                            <span class="dadad">Quantity:</span> {{ item.quantity }},
+                                            <span class="dadad">Quantity:</span> {{ item.quantity }}, <br>
+                                            <span class="dadad">Color:</span> {{ item.color }}, <br>
+                                            <span class="dadad">Size:</span> {{ item.size }}, <br>
+                                            <span class="dadad">Metal Type:</span> {{ item.metal_type }} <br>
                                             <span class="dadad">Price: $ {{ item.price }}</span> <br>
-                                            <span class="dadad">Date:</span>  {{ order.created }}
-                                            <br>
                                         </div>
                                     {% endfor %}
+                                <div class="orders-carts">
+                                      <span class="dadad">Date:</span>  {{ order.created }}
+                                </div>
+
                                 </p>
                             </div>
                         {% endfor %}

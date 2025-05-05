@@ -21,9 +21,15 @@
                             </div>
                             <div class="cart-card-q">
                                 <p>Quantity: {{ item.quantity }}</p>
-                                <p>Color: {{ item.color_obj.color }}</p>
-                                <p>Size: {{ item.size_obj.size}}</p>
-                                <p>Metal Type: {{ item.metal_type_obj.metal_type }}</p>
+                                {% if item.color != None %}
+                                	 <p>Color: {{ item.color_obj.color }}</p>
+                                {% endif %}
+                                {% if item.size != None %}
+                                	 <p>Size: {{ item.size_obj.size}}</p>
+                                {% endif %}
+                            {% if item.metal_type != None %}
+                            	 <p> {{ item.metal_type_obj }}</p>
+                            {% endif %}
                             </div>
                         </div>
                         <form action="{% url "cart:cart_remove" product.id %}" method="post">

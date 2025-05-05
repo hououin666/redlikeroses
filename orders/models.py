@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models import SET_DEFAULT
 
-from main.models import Product
+from main.models import Product, ProductVariation, Color, Size, MetalType
 from users.models import User
 
 
@@ -41,6 +41,10 @@ class OrderItem(models.Model):
     product = models.ForeignKey(to=Product, related_name='order_items', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     quantity = models.PositiveIntegerField(default=1)
+    color = models.ForeignKey(to=Color, on_delete=models.SET_NULL, null=True, blank=True,verbose_name='Цвет')
+    size = models.ForeignKey(to=Size, on_delete=models.SET_NULL, null=True, blank=True,verbose_name='Размер')
+    metal_type = models.ForeignKey(to=MetalType, on_delete=models.SET_NULL, null=True, blank=True,verbose_name='Тип Металла')
+    variation_key = models.CharField(max_length=100, blank=True, help_text='Уникальный ключ вариации товара')
 
     def __str__(self):
         return '{}'.format(self.id)

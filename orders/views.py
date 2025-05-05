@@ -20,6 +20,10 @@ def order_create(request):
                                          product=item['product'],
                                          price=item['price'],
                                          quantity=item['quantity'],
+                                         color=item.get('color_obj') if item['color'] else None,
+                                         size=item.get('size_obj') if item['size'] else None,
+                                         metal_type=item.get('metal_type_obj' if item['metal_type'] else None),
+                                         variation_key=item['variation_key']
                                          )
             cart.clear()
             return render(request, 'orders/created_order.html', {'order': order})
