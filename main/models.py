@@ -1,7 +1,7 @@
-from tkinter.constants import CASCADE
+
 
 from django.db import models
-from django.db.models import PositiveIntegerField
+
 
 # Create your models here.
 

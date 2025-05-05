@@ -47,7 +47,7 @@ def products_list(request,product_type_id=None):
 
 def product_detail(request, product_id):
     product = Product.objects.filter(id=product_id).last()
-    cart_product_form = CartAddProductForm()
+    cart_product_form = CartAddProductForm(product=product)
     context = {
         'product': product,
         'cart_product_form': cart_product_form

@@ -16,10 +16,18 @@ from main.models import Product
 def cart_add(request,product_id):
     cart = Cart(request)
     product = Product.objects.filter(id=product_id).first()
-    form = CartAddProductForm(request.POST)
+    form = CartAddProductForm(request.POST, product=product)
+
     if form.is_valid():
         cleaned_data = form.cleaned_data
+        color = cleaned_data.get('color')
+        size = cleaned_data.get('size')
+        metal_type = cleaned_data.get('metal_type')
+
         cart.add(product=product,
+                 color=color,
+                 size=size,
+                 metal_type=metal_type,
                  quantity=cleaned_data['quantity'],
                  update_quantity=cleaned_data['update'])
         return redirect('cart:cart_detail')
@@ -28,7 +36,7 @@ def cart_remove(request,product_id):
     cart = Cart(request)
     product = Product.objects.filter(id=product_id).first()
     cart.remove(product)
-    return redirect('carts:cart_detail')
+    return redirect('cart:cart_detail')
 
 
 def cart_detail(request):
