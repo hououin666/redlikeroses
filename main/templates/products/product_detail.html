@@ -49,7 +49,7 @@
 
             <form action="{% url "cart:cart_add" product.id %}" class="qform" method="post">
                 <div class="cart-form">
-                    {{ cart_product_form.as_p }}
+                    {{ cart_product_form.as_div }}
                     {% csrf_token %} <p>Description: {{ product.description|linebreaks }}</p>
 {#            {% if product.discount %}#}
 {#                <div class="cart-discount d-flex gap-2">#}
