@@ -147,3 +147,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR/ 'media')
 AUTH_USER_MODEL = "users.User"
 
 CART_SESSION_ID = 'cart'
+
+SESSION_COOKIE_AGE = 5*60

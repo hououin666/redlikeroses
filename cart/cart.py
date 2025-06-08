@@ -13,6 +13,7 @@ class Cart:
             cart = self.session[settings.CART_SESSION_ID] = {}
         self.cart = cart
 
+
     def add(self, product, quantity=1, update_quantity=False, color=None, size=None, metal_type=None):
 
         variation_key = f'{product.id}_{color.id if color else 'none'}_{size.id if size else 'none'}_{metal_type.id if metal_type else 'none'}'

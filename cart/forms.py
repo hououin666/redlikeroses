@@ -28,7 +28,7 @@ class CartAddProductForm(forms.Form):
                 if colors.exists():  # Проверяем, есть ли результаты
                     self.fields['color'] = forms.ModelChoiceField(
                         queryset=colors,
-                        required=False,
+                        required=True,
                         label='Цвет'
                     )
 
@@ -39,7 +39,7 @@ class CartAddProductForm(forms.Form):
                 if sizes.exists():  # Проверяем, есть ли результаты
                     self.fields['size'] = forms.ModelChoiceField(
                         queryset=sizes,
-                        required=False,
+                        required=True,
                     )
 
                 # Типы металлов
